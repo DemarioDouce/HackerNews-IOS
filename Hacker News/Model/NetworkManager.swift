@@ -8,7 +8,9 @@
 
 import UIKit
 
-class NetworkManager {
+class NetworkManager: ObservableObject {
+    
+    @Published var posts = [Post]()
     
     func getData() {
         
@@ -24,6 +26,11 @@ class NetworkManager {
                     if let safeData = data {
                         do {
                             let results = try decoder.decode(Results.self, from: safeData)
+                            DispatchQueue.main.async {
+                                
+                                self.posts = results.hits
+                            }
+                            
                         } catch {
                             print(error)
                         }
