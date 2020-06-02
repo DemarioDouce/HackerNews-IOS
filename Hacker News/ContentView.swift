@@ -11,9 +11,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            List{
-               
-                Text("Hi")
+            List(posts){ post in
+                
+                Text(post.title)
+                
             }
         }
         .navigationBarTitle("Hacker News")
