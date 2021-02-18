@@ -1,4 +1,5 @@
-# Dice Roll SwiftUI
-## Learning project
+# Hacker News
 ---
-News app that uses the api https://hn.algolia.com/api
+## Screenshot
+![Mockup image.](/Mockups/MockupHackerNews.png)
+---
